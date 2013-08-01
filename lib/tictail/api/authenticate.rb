@@ -2,6 +2,7 @@ module Tictail
   module Api
     module Authenticate
       def authenticate(params)
+        params[:grant_type] = 'authorization_code'
         response = Faraday.post do |req|
           req.url 'https://tictail.com/oauth/token'
           req.headers['Content-Type'] = 'application/x-www-form-urlencoded'
