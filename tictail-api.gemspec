@@ -22,6 +22,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake'
 
   spec.add_dependency 'faraday'
-  spec.add_dependency 'oj'
-  spec.add_dependency 'faraday_middleware'
+  spec.add_dependency 'typhoeus'
+  spec.add_dependency 'faraday_middleware', '~> 0.9'
+  spec.add_dependency 'oj',                 '~> 2.0'
 end

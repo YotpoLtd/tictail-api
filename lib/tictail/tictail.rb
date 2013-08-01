@@ -7,7 +7,7 @@ module Tictail
     end
 
     #
-    # Makes sure that the method missing is checked with the Storenvy::Client instance
+    # Makes sure that the method missing is checked with the Tictail::Client instance
     #
     # @param method_name [String] the name of the method we want to run
     # @param include_private [Boolean] defines wether to check for private functions as well

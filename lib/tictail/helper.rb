@@ -1,6 +1,6 @@
 module Tictail
   module Helper
-    def symbolize_keys! hash
+    def symbolize_keys hash
       return hash.inject({}){|memo,(k,v)| memo[k.to_sym] = v; memo}
     end
     def convert_hash_keys(value)
