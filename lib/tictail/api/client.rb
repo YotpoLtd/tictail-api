@@ -9,6 +9,9 @@ require 'typhoeus/adapters/faraday'
 require 'tictail/api/authenticate'
 require 'tictail/api/ping'
 require 'tictail/helper'
+require 'tictail/api/order'
+require 'tictail/api/product'
+require 'tictail/api/customer'
 
 
 
@@ -17,6 +20,9 @@ module Tictail
     include Tictail::Helper
     include Tictail::Api::Authenticate
     include Tictail::Api::Ping
+    include Tictail::Api::Order
+    include Tictail::Api::Product
+    include Tictail::Api::Customer
 
     attr_accessor :access_token
 
@@ -88,4 +94,6 @@ module Tictail
       end
     end
   end
+
+  class InvalidParams < Exception; end
 end
