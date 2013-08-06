@@ -6,12 +6,14 @@ require 'tictail/faraday_middleware/parse_oj'
 require 'typhoeus'
 require 'typhoeus/adapters/faraday'
 
+require 'tictail/api/version'
 require 'tictail/api/authenticate'
 require 'tictail/api/ping'
 require 'tictail/helper'
 require 'tictail/api/order'
 require 'tictail/api/product'
 require 'tictail/api/customer'
+
 
 
 
