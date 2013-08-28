@@ -4,7 +4,7 @@ module Tictail
       # "env" contains the request
       @app.call(env).on_complete do
         if env[:status] == 401 || env[:status] == 403
-          raise HTTPUnauthorized.new 'invalid storeenvy credentials'
+          raise HTTPUnauthorized.new 'invalid tictail credentials'
         end
       end
     end

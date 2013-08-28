@@ -13,6 +13,7 @@ require 'tictail/helper'
 require 'tictail/api/order'
 require 'tictail/api/product'
 require 'tictail/api/customer'
+require 'tictail/api/card'
 
 
 
@@ -25,6 +26,7 @@ module Tictail
     include Tictail::Api::Order
     include Tictail::Api::Product
     include Tictail::Api::Customer
+    include Tictail::Api::Card
 
     attr_accessor :access_token
 
@@ -43,7 +45,7 @@ module Tictail
     # @param url [String] the relative path in the Tictail API
     # @param params [Hash] the url params that should be passed in the request
     def get(url, params = {})
-      params = params.inject({}){|memo,(k,v)| memo[k.to_s] = v; memo}
+      params = convert_hash_keys(params)
       @access_token = params.delete('access_token') if params['access_token']
       return connection.get(url, params)
     end
@@ -96,6 +98,5 @@ module Tictail
       end
     end
   end
-
   class InvalidParams < Exception; end
 end
