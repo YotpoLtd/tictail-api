@@ -3,3 +3,6 @@
 
 2013-08-28 Alon Braitstein
 1. Add card posting.
+
+2013-09-03 Alon Braitstein
+1. Remove store_id from parameters after retrieving it.
