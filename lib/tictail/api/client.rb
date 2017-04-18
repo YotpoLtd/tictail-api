@@ -1,8 +1,6 @@
 require 'faraday'
 require 'faraday_middleware'
 require 'tictail/faraday_middleware/response_parser'
-require 'tictail/faraday_middleware/encode_oj'
-require 'tictail/faraday_middleware/parse_oj'
 require 'typhoeus'
 require 'typhoeus/adapters/faraday'
 
@@ -91,8 +89,8 @@ module Tictail
         conn.use Tictail::ResponseParser
 
         # Setting response parser to oj
-        conn.request :oj
-        conn.response :oj, :content_type => /\bjson$/
+        conn.request :multi_json
+        conn.response :multi_json
 
         conn.adapter :typhoeus
       end
