@@ -10,3 +10,4 @@ deploy:
   on:
     branch: master
     repo: YotpoLtd/tictail-api
+    rvm: 2.3
