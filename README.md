@@ -6,7 +6,7 @@ TODO: Write a gem description
 
 Add this line to your application's Gemfile:
 
-    gem 'tictail-api'
+    gem 'tictail-api', '~> 0.1'
 
 And then execute:
 
