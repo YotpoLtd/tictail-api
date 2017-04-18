@@ -1,0 +1,12 @@
+language: ruby
+rvm:
+- 2.2
+- 2.3
+deploy:
+  provider: rubygems
+  api_key:
+    secure: fJ6GY6FzOTDZj9rZziE6+eUIv73lLcyoxklqwa6gcfDCrPQcIcMJxiLrQYx86S/bktLzqN7T/U5pFWZaYPtDndbjt4LhB6j43iIUgMpJ30Yr1ZAaTeXdpMD8bhSaQSBa7nPrlCN6NoQX0i7AzHG5QUF6yMogrHrfucnL4B5J6FA=
+  gem: tictail-api
+  on:
+    branch: master
+    repo: YotpoLtd/tictail-api
