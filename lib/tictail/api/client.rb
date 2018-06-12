@@ -1,5 +1,4 @@
 require 'faraday'
-require 'faraday_middleware'
 require 'faraday_middleware/parse_oj'
 require 'tictail/faraday_middleware/response_parser'
 require 'typhoeus'
